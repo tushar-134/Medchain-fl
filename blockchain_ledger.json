@@ -1,0 +1,167 @@
+[
+  {
+    "index": 0,
+    "timestamp": "2025-12-28T02:09:52.827601",
+    "type": "genesis",
+    "data": "MedChain-FL Genesis Block"
+  },
+  {
+    "index": 1,
+    "timestamp": "2025-12-28T02:10:06.375202",
+    "type": "client_update",
+    "data": {
+      "round": 1,
+      "hospital": "italy",
+      "data_size": 1000,
+      "metrics": {
+        "loss": 0.343309891410172,
+        "accuracy": 0.985
+      }
+    }
+  },
+  {
+    "index": 2,
+    "timestamp": "2025-12-28T02:10:08.601480",
+    "type": "client_update",
+    "data": {
+      "round": 1,
+      "hospital": "pakistan",
+      "data_size": 1000,
+      "metrics": {
+        "loss": 0.3016911447048187,
+        "accuracy": 0.987
+      }
+    }
+  },
+  {
+    "index": 3,
+    "timestamp": "2025-12-28T02:10:10.664868",
+    "type": "client_update",
+    "data": {
+      "round": 1,
+      "hospital": "usa",
+      "data_size": 1000,
+      "metrics": {
+        "loss": 0.36570735136047006,
+        "accuracy": 0.977
+      }
+    }
+  },
+  {
+    "index": 4,
+    "timestamp": "2025-12-28T02:10:10.684646",
+    "type": "fl_round",
+    "data": {
+      "round": 1,
+      "num_clients": 3,
+      "avg_loss": 0.3369027958251536,
+      "avg_accuracy": 0.983
+    }
+  },
+  {
+    "index": 5,
+    "timestamp": "2025-12-28T02:10:13.536348",
+    "type": "client_update",
+    "data": {
+      "round": 2,
+      "hospital": "italy",
+      "data_size": 1000,
+      "metrics": {
+        "loss": 0.0973690286045894,
+        "accuracy": 0.998
+      }
+    }
+  },
+  {
+    "index": 6,
+    "timestamp": "2025-12-28T02:10:15.656601",
+    "type": "client_update",
+    "data": {
+      "round": 2,
+      "hospital": "pakistan",
+      "data_size": 1000,
+      "metrics": {
+        "loss": 0.10327567171771079,
+        "accuracy": 0.998
+      }
+    }
+  },
+  {
+    "index": 7,
+    "timestamp": "2025-12-28T02:10:17.761569",
+    "type": "client_update",
+    "data": {
+      "round": 2,
+      "hospital": "usa",
+      "data_size": 1000,
+      "metrics": {
+        "loss": 0.12384156056214124,
+        "accuracy": 0.998
+      }
+    }
+  },
+  {
+    "index": 8,
+    "timestamp": "2025-12-28T02:10:17.781588",
+    "type": "fl_round",
+    "data": {
+      "round": 2,
+      "num_clients": 3,
+      "avg_loss": 0.10816208696148048,
+      "avg_accuracy": 0.9979999999999999
+    }
+  },
+  {
+    "index": 9,
+    "timestamp": "2025-12-28T02:10:19.980692",
+    "type": "client_update",
+    "data": {
+      "round": 3,
+      "hospital": "italy",
+      "data_size": 1000,
+      "metrics": {
+        "loss": 0.03400640332256444,
+        "accuracy": 1.0
+      }
+    }
+  },
+  {
+    "index": 10,
+    "timestamp": "2025-12-28T02:10:22.066100",
+    "type": "client_update",
+    "data": {
+      "round": 3,
+      "hospital": "pakistan",
+      "data_size": 1000,
+      "metrics": {
+        "loss": 0.04961444006767124,
+        "accuracy": 0.9990000000000001
+      }
+    }
+  },
+  {
+    "index": 11,
+    "timestamp": "2025-12-28T02:10:23.988228",
+    "type": "client_update",
+    "data": {
+      "round": 3,
+      "hospital": "usa",
+      "data_size": 1000,
+      "metrics": {
+        "loss": 0.06950648460770026,
+        "accuracy": 0.995
+      }
+    }
+  },
+  {
+    "index": 12,
+    "timestamp": "2025-12-28T02:10:23.995820",
+    "type": "fl_round",
+    "data": {
+      "round": 3,
+      "num_clients": 3,
+      "avg_loss": 0.05104244266597865,
+      "avg_accuracy": 0.9980000000000001
+    }
+  }
+]
