@@ -7,16 +7,27 @@ import Dashboard from './components/Dashboard';
 import ModelTraining from './components/ModelTraining';
 import Prediction from './components/Prediction';
 import Blockchain from './components/Blockchain';
+import HospitalUpload from './components/HospitalUpload';
+import FederatedModelUpdatePage from './components/FederatedModelUpdatePage';
 
 const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: 'light',
     primary: {
-      main: '#2196f3',
+      main: '#0d9488',
     },
     secondary: {
-      main: '#4caf50',
+      main: '#065f46',
     },
+    success: {
+      main: '#059669',
+    },
+    info: {
+      main: '#0f766e',
+    },
+    warning: {
+      main: '#f59e0b'
+    }
   },
 });
 
@@ -42,6 +53,10 @@ function App() {
             <Button color="inherit" component={Link} to="/blockchain">
               Blockchain
             </Button>
+            <Button color="inherit" component={Link} to="/hospital-upload">
+              Hospital Portal
+            </Button>
+
           </Toolbar>
         </AppBar>
 
@@ -50,6 +65,8 @@ function App() {
           <Route path="/training" element={<ModelTraining />} />
           <Route path="/prediction" element={<Prediction />} />
           <Route path="/blockchain" element={<Blockchain />} />
+          <Route path="/hospital-upload" element={<HospitalUpload />} />
+          <Route path="/federated-success" element={<FederatedModelUpdatePage />} />
         </Routes>
       </Router>
     </ThemeProvider>
