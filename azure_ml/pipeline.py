@@ -28,7 +28,31 @@ def create_fl_pipeline(ws: Workspace) -> Pipeline:
     env = create_environment()
     
     # Pipeline steps would go here
-    # This is a placeholder for the actual FL pipeline
+    # This is a placeholder for the actual FL pipeline.
+    # 
+    # To implement the actual steps, you would typically define:
+    # 1. Data Loading Step: Downloads data from Datastore.
+    # 2. Local Training Steps: Run train.py on each hospital node (simulated or actual).
+    # 3. Aggregation Step: Averages the model weights.
+    
+    # Example Step Definition:
+    # train_step = PythonScriptStep(
+    #     name="local_training",
+    #     script_name="run_fl_standalone.py",  # Your entry point script
+    #     arguments=[
+    #         "--rounds", 3,
+    #         "--epochs", 5,
+    #         "--data_dir", "data/processed"
+    #     ],
+    #     inputs=[...],
+    #     outputs=[...],
+    #     compute_target=compute_target,
+    #     runconfig=run_config,
+    #     source_directory="."
+    # )
+    
+    # pipeline = Pipeline(workspace=ws, steps=[train_step])
+    # return pipeline
     
     logger.info("Created FL pipeline")
     

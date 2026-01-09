@@ -1,9 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
-import Dashboard from './components/Dashboard';
 import ModelTraining from './components/ModelTraining';
 import Prediction from './components/Prediction';
 import Blockchain from './components/Blockchain';
@@ -36,36 +34,14 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <AppBar position="static">
-          <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              MedChain-FL
-            </Typography>
-            <Button color="inherit" component={Link} to="/">
-              Dashboard
-            </Button>
-            <Button color="inherit" component={Link} to="/training">
-              Model Training
-            </Button>
-            <Button color="inherit" component={Link} to="/prediction">
-              Disease Prediction
-            </Button>
-            <Button color="inherit" component={Link} to="/blockchain">
-              Blockchain
-            </Button>
-            <Button color="inherit" component={Link} to="/hospital-upload">
-              Hospital Portal
-            </Button>
-
-          </Toolbar>
-        </AppBar>
-
+        {/* No shared navigation - each portal is completely isolated */}
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/training" element={<ModelTraining />} />
-          <Route path="/prediction" element={<Prediction />} />
+          {/* Direct URL access only - no navigation between portals */}
+          <Route path="/" element={<Prediction />} />
+          <Route path="/hospital-portal" element={<Prediction />} />
+          <Route path="/admin-portal" element={<ModelTraining />} />
+          <Route path="/data-upload-portal" element={<HospitalUpload />} />
           <Route path="/blockchain" element={<Blockchain />} />
-          <Route path="/hospital-upload" element={<HospitalUpload />} />
           <Route path="/federated-success" element={<FederatedModelUpdatePage />} />
         </Routes>
       </Router>

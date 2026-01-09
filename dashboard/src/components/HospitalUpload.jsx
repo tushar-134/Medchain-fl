@@ -20,8 +20,8 @@ const HospitalDataUploadDashboard = () => {
         plateletCount: '',
         reticulocyteCount: '',
         diagnosis: 'normal',
-        Age:'',
-        Gender:''
+        Age: '',
+        Gender: ''
     });
     const [uploadedSamples, setUploadedSamples] = useState([]);
     const [trainingMetrics, setTrainingMetrics] = useState({
@@ -77,8 +77,8 @@ const HospitalDataUploadDashboard = () => {
             platelets: patientData.plateletCount ? parseFloat(patientData.plateletCount) : '',
             id: patientData.patientId,
             diagnosis: patientData.diagnosis,
-            Age:patientData.Age,
-            Gender:patientData.Gender
+            Age: patientData.Age,
+            Gender: patientData.Gender,
         };
 
         try {
@@ -109,8 +109,8 @@ const HospitalDataUploadDashboard = () => {
                 plateletCount: '',
                 patientId: '',
                 diagnosis: 'normal',
-                Age:'',
-                Gender:''
+                Age: '',
+                Gender: ''
             });
         } catch (err) {
             console.error('Upload failed', err);
@@ -143,11 +143,29 @@ const HospitalDataUploadDashboard = () => {
     };
 
     return (
-        <div className="hospital-dashboard-container">
+        <div className="hospital-dashboard-container" style={{ minHeight: '100vh', background: '#f5f5f5' }}>
             <div className="dashboard-wrapper">
-                <div className="dashboard-header">
-                    <h1 className="dashboard-title">Hospital Data Contribution Portal</h1>
-                    <p className="dashboard-subtitle">Upload patient CBC data for privacy-preserving federated learning</p>
+                {/* Standalone Portal Header */}
+                <div style={{
+                    background: 'linear-gradient(135deg, #059669 0%, #0d9488 100%)',
+                    color: 'white',
+                    padding: '2.5rem',
+                    borderRadius: '1rem',
+                    marginBottom: '2rem',
+                    boxShadow: '0 8px 16px rgba(0,0,0,0.15)'
+                }}>
+                    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
+                        <Upload size={64} style={{ marginRight: '1.5rem' }} />
+                        <div>
+                            <h1 style={{ margin: 0, fontSize: '3rem', fontWeight: 700 }}>Data Upload Portal</h1>
+                            <h2 style={{ margin: '0.75rem 0 0 0', fontSize: '1.5rem', opacity: 0.95, fontWeight: 500 }}>
+                                Hospital Data Contribution System
+                            </h2>
+                        </div>
+                    </div>
+                    <p style={{ margin: '1rem 0 0 0', fontSize: '1.1rem', opacity: 0.95 }}>
+                        Upload patient CBC data for privacy-preserving federated learning
+                    </p>
                 </div>
 
                 {/* Hospital Selection */}
@@ -327,10 +345,10 @@ const HospitalDataUploadDashboard = () => {
                                             className="form-input"
                                         />
                                     </div>
- 
 
-                                 
-                                     <div className="form-group">
+
+
+                                    <div className="form-group">
                                         <label className="form-label">Gender</label>
                                         <select
                                             name="Gender"
@@ -346,10 +364,10 @@ const HospitalDataUploadDashboard = () => {
 
 
                                 </div>
-                                   
 
-                               
-                                
+
+
+
                                 <button
                                     onClick={handleManualSubmit}
                                     className="action-btn btn-primary"
@@ -365,7 +383,7 @@ const HospitalDataUploadDashboard = () => {
                         {/* Uploaded Samples */}
                         <div className="dashboard-card">
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                                <div style={{ display: 'flex', alignItems: 'center' }}>
                                     <Database className="mr-2" style={{ color: '#0d9488' }} />
                                     <h2 className="section-title-text">Uploaded Samples</h2>
                                 </div>
@@ -398,10 +416,10 @@ const HospitalDataUploadDashboard = () => {
                                                     <td>{sample.mcv}</td>
                                                     <td>
                                                         <span className={`badge ${sample.diagnosis === 'normal'
-                                                                ? 'badge-normal'
-                                                                : sample.diagnosis === 'minor'
-                                                                    ? 'badge-minor'
-                                                                    : 'badge-major'
+                                                            ? 'badge-normal'
+                                                            : sample.diagnosis === 'minor'
+                                                                ? 'badge-minor'
+                                                                : 'badge-major'
                                                             }`}>
                                                             {sample.diagnosis}
                                                         </span>

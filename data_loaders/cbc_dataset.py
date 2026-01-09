@@ -11,8 +11,9 @@ from sklearn.preprocessing import StandardScaler
 class CBCDataset(Dataset):
     """Dataset for Complete Blood Count (CBC) data."""
     
-    FEATURE_COLUMNS = ["hb", "rbc", "mcv", "mch", "mchc", "rdw", "wbc", "platelets"]
+    FEATURE_COLUMNS = ["hb", "rbc", "mcv", "mch", "mchc", "rdw", "wbc", "platelets","Age"]
     LABEL_MAP = {"normal": 0, "minor": 1, "major": 2}
+    LABEL_MAP = {}
     
     def __init__(
         self,
